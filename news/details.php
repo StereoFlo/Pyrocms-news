@@ -73,6 +73,7 @@ class Module_News extends Module {
 			  `body` text collate utf8_unicode_ci NOT NULL,
 			  `created_on` int(11) NOT NULL,
 			  `updated_on` int(11) NOT NULL default 0,
+			  `views` int(11) DEFAULT NULL,
 			  `status` enum('draft','live') collate utf8_unicode_ci NOT NULL default 'draft',
 			  PRIMARY KEY  (`id`),
 			  UNIQUE KEY `title` (`title`),
