@@ -72,6 +72,7 @@ class News extends Public_Controller
 	
 	function view($slug = '')
 	{
+		
 		if (!$slug or !$article = $this->news_m->get_by('slug', $slug))
 		{
 			redirect('news');
@@ -106,9 +107,12 @@ class News extends Public_Controller
 			$this->template->set_breadcrumb($article->category->title, 'news/category/'.$article->category->slug);
 		}
 		
+		$this->news_m->update($article->id, array('views' => ($this->news_m->get($article->id)->views + 1)));
+
 		$this->template->set_breadcrumb($article->title, 'news/'.date('Y/m', $article->created_on).'/'.$article->slug);
 		$this->template->build('view', $this->data);
 	}
+	
 	private function _articles_metadata(&$articles = array())
 	{
 		$keywords = array();

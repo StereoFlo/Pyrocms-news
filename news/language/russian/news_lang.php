@@ -32,6 +32,7 @@ $lang['news_author_name_label']							= 'Автор';
 $lang['news_read_more_label']								= 'читать целиком&nbsp;&raquo;';
 $lang['news_created_hour']									= 'Время (Час)';
 $lang['news_created_minute']								= 'Время (Минута)';
+$lang['news_views']								= 'Просмотров';
 
 // заголовки
 $lang['news_create_title']									= 'Создать статью';
