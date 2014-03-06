@@ -113,16 +113,22 @@ class Admin extends Admin_Controller
 
 		if ($this->form_validation->run())
 		{
+			if ($this->input->post('category_id') == 0)
+			{
+				$this->session->set_flashdata('error', $this->lang->line('news_article_add_error'));
+				redirect('admin/news/create');
+			}
+			
 			$id = $this->news_m->insert(array(
 				'title'			=> $this->input->post('title'),
 				'slug'			=> $this->input->post('slug'),
-				'category_id'	=> $this->input->post('category_id'),
+				'category_id'		=> $this->input->post('category_id'),
 				'intro'			=> $this->input->post('intro'),
 				'body'			=> $this->input->post('body'),
 				'status'		=> $this->input->post('status'),
 				'created_on' => $created_on
 			));
-
+			
 			if($id)
 			{
 				$this->session->set_flashdata('success', sprintf($this->lang->line('news_article_add_success'), $this->input->post('title')));

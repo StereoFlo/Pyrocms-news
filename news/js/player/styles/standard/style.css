@@ -1,0 +1,155 @@
+/*
+	Codo Player "standard" stylesheet
+	Copyright (C) Donato Software House
+*/
+
+.codo-player {
+	visibility: visible!important; /* system specific - do not remove this line! */
+	font: 12px Arial;
+	color: white;
+}
+
+.codo-player-container {
+	background: black;
+}
+
+.codo-player-controls-wrap {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 34px;
+	text-shadow: 0 1px 1px #000;
+	letter-spacing: 2px;
+}
+
+.codo-player-controls-shade {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	background: #000;
+}
+
+.codo-player-controls {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.codo-player-controls-play-pause-button {
+	position: relative;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.codo-player-controls-title-text {
+	position: relative;
+	float: left;
+	margin: 8px 5px;
+}
+
+.codo-player-controls-time-text {
+	position: relative;
+	float: right;
+	margin: 8px 5px;
+}
+
+.codo-player-controls-seek {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 4px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.codo-player-controls-volume-horizontal {
+	position: relative;
+	float: right;
+	width: 30px;
+	height: 5px;
+	margin: 12px 5px;
+}
+
+.codo-player-controls-volume-vertical {
+	position: relative;
+	float: right;
+	width: 5px;
+	height: 20px;
+	margin: 5px;
+}
+
+.codo-player-controls-fullscreen-button {
+	position: relative;
+	float: right;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.codo-player-cover-background {
+	background: #171e14;
+}
+
+.codo-player-cover-play-button {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+}
+
+.codo-player-error-wrap {
+}
+
+.codo-player-error-text {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 5px;
+	text-shadow: none;
+}
+
+/* Playlist */
+
+.codo-player-playlist-wrap {
+	color: #454545;
+	text-shadow: 0 1px 1px #fff;
+	letter-spacing: 1px;
+	border: 1px solid #ccc;
+	padding: 0;
+	margin: 0;
+}
+
+.codo-player-playlist-ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.codo-player-playlist-ul li {
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+	padding: 10px;
+	border-top: 1px solid #ccc;
+}
+
+.codo-player-playlist-ul li span {
+	margin: 0 10px;
+}
+
+.codo-player-playlist-currentClip {
+	font-weight: bold;
+}

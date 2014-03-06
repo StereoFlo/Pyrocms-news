@@ -12,6 +12,7 @@ class News extends Public_Controller
 		$this->load->model('comments/comments_m');        
 		$this->load->helper('text');
 		$this->lang->load('news');
+		$this->template->title($this->module_details['name'])->append_metadata(js('player/CodoPlayer.js', 'news'));
 	}
 	
 	function index()
@@ -70,7 +71,7 @@ class News extends Public_Controller
 	}
 	
 	function view($slug = '')
-	{	
+	{
 		if (!$slug or !$article = $this->news_m->get_by('slug', $slug))
 		{
 			redirect('news');
