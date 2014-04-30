@@ -55,7 +55,7 @@ class Admin extends Admin_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->data = new stdClass();
 		$this->load->model('news_m');
 		$this->load->model('news_categories_m');
 		$this->lang->load('news');
@@ -73,8 +73,9 @@ class Admin extends Admin_Controller
 			}
 		}
 		
-		$this->template->append_metadata( css('news.css', 'news') )
-				->set_partial('shortcuts', 'admin/partials/shortcuts');
+		$this->template
+			->append_metadata( css('news.css', 'news') )
+			->set_partial('shortcuts', 'admin/partials/shortcuts');
 	}
 	
 	public function index()

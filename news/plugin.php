@@ -20,7 +20,7 @@ class Plugin_News extends Plugin
 	{
 		$limit = $this->attribute('limit', 10);
 		$category = $this->attribute('category');
-		$order = $this->attribute('order');
+		$order = $this->attribute('order', 'desc');
 
 		if ($category)
 		{

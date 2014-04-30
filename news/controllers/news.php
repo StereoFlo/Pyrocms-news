@@ -17,11 +17,13 @@ class News extends Public_Controller
 	
 	function index()
 	{	
-		$this->data->pagination = create_pagination('news/page', $this->news_m->count_by(array('status' => 'live')), $this->limit, 3);	
-		$this->data->news = $this->news_m->limit($this->data->pagination['limit'])->get_many_by(array('status' => 'live'));	
-		$meta = $this->_articles_metadata($this->data->news);
+		$pagination = create_pagination('news/page', $this->news_m->count_by(array('status' => 'live')), $this->limit, 3);	
+		$news = $this->news_m->limit($pagination['limit'])->get_many_by(array('status' => 'live'));	
+		$meta = $this->_articles_metadata($news);
 
 		$this->template->title($this->module_details['name'])
+						->set('news', $news)
+						->set('pagination', $pagination)
 						->set_metadata('description', $meta['description'])
 						->set_metadata('keywords', $meta['keywords'])
 						->build('index', $this->data);

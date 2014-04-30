@@ -5,7 +5,7 @@
 		<!-- Article heading -->
 		<div class="article_heading">
 			<h2><?=  anchor('news/' .date('Y/m', $article->created_on) .'/'. $article->slug, $article->title); ?></h2>
-			<p><?= lang('news_posted_label');?>: <b><?= format_date($article->created_on); ?></b>
+			<p><?= lang('news_posted_label');?>: <b><?= format_date($article->created_on); ?></b> | <?= lang('news_views');?>: <b><?= $article->views; ?></b>
 			<?php if($article->category_slug) { ?>
 				| <?= lang('news_category_label');?>: <?= anchor('news/category/'.$article->category_slug, $article->category_title);?>
 			</p>
