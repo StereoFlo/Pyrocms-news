@@ -3,14 +3,17 @@ form.crud label.intro {
     display: block;
     float: none;
 }
+
 li.date-meta div.selector {
     float: left;
     width: 70px;
     /*background-position: -633px -130px;*/
 }
+
 li.date-meta div.selector span {
     width: 28px;
 }
+
 li.date-meta label.time-meta {
     width: auto;
 }
