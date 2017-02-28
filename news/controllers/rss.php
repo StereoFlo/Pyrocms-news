@@ -64,7 +64,7 @@ class Rss extends Public_Controller
     /**
      * @param array $posts
      */
-    function _build_feed($posts = array())
+    private function _build_feed($posts = array())
     {
         $this->data = new stdClass();
         $this->data->rss->encoding = $this->config->item('charset');
